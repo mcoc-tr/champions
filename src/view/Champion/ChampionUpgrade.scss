@@ -1,0 +1,119 @@
+@import "../../util/button";
+@import "../../util/fonts";
+@import "../../util/input";
+@import "../../util/colors";
+
+.champion-upgrade {
+    @extend .button--primary;
+    width: 500px;
+    min-height: 52px;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto 1em;
+    padding: 8px 0;
+    box-sizing: border-box;
+    box-shadow: 0 8px 0 -4px  rgba(0, 0, 0, .25);
+    background: #eee;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+
+    & span {
+        pointer-events: none;
+    }
+
+    &.champion-upgrade-rank-up {
+        background: #38c;
+        color: #fff;
+        text-shadow: 0 1px 0 #000;
+    }
+
+    &.champion-upgrade-max {
+        background: #3c3;
+        color: #fff;
+        text-shadow: 0 1px 0 #000;
+    }
+
+    .champion-upgrade-catalyst {
+        display: inline-block;
+        line-height: 2em;
+        padding: 0 8px;
+
+        > .image-icon {
+            height: 1.4em;
+            width: 1.4em;
+            margin-bottom: -.1em;
+        }
+
+        > .icon {
+            position: relative;
+            font-size: 1.5em;
+
+            text-shadow: 0 1px 0 #000;
+        }
+
+        &.champion-upgrade-catalyst--basic > .icon {
+            color: #555;
+        }
+
+        &.champion-upgrade-catalyst--class-cosmic > .icon {
+            color: $color-cosmic;
+        }
+
+        &.champion-upgrade-catalyst--class-tech > .icon {
+            color: $color-tech;
+        }
+
+        &.champion-upgrade-catalyst--class-mutant > .icon {
+            color: $color-mutant;
+        }
+
+        &.champion-upgrade-catalyst--class-skill > .icon {
+            color: $color-skill;
+        }
+
+        &.champion-upgrade-catalyst--class-science > .icon {
+            color: $color-science;
+        }
+
+        &.champion-upgrade-catalyst--class-mystic > .icon {
+            color: $color-mystic;
+        }
+
+        &.champion-upgrade-catalyst--gold > .icon {
+            color: $color-gold;
+        }
+
+        &.champion-upgrade-catalyst--alpha > .icon {
+            color: #000;
+            text-shadow: 0 1px 0 #6af;
+        }
+    }
+
+    .champion-upgrade-badge {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        font-size: 32px;
+        color: #fff;
+
+        &.champion-upgrade-badge--max {
+            text-shadow: 0 0 8px #3c3;
+        }
+
+        &.champion-upgrade-badge--rank-up {
+            color: #fff;
+            text-shadow: 0 0 8px #38c;
+        }
+
+        .image-icon {
+            position: absolute;
+            right: -24px;
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    @media print {
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../util/colors";
+
+$transition-time: .333s;
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    overflow: hidden;
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0);
+        transition: opacity $transition-time, transform $transition-time;
+
+        @media print {
+            visibility: hidden;
+        }
+
+        &.slide-current {
+            pointer-events: auto;
+            opacity: 1;
+            transform: scale(1) translate(0, 0);
+            z-index: 100;
+
+            @media print {
+                visibility: visible;
+                width: 100%;
+                height: auto;
+                overflow: visible;
+            }
+        }
+
+        &.slide-previous {
+            pointer-events: none;
+            opacity: .001;
+            transform: scale(.8) translate(-50%, 0);
+            z-index: 0;
+        }
+
+        &.slide-next {
+            pointer-events: none;
+            opacity: .001;
+            transform: scale(1.5) translate(100%, 0);
+            z-index: 0;
+        }
+    }
+
+    @media print {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+}

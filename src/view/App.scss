@@ -1,0 +1,83 @@
+@import "../util/colors";
+
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .pages {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .001;
+            overflow-y: auto;
+            pointer-events: none;
+            transition: opacity .25s;
+            background: rgba(255, 255, 255, .333);
+            z-index: 0;
+
+            @media print {
+                visibility: hidden;
+            }
+
+            &.page--current {
+                opacity: 1;
+                pointer-events: auto;
+                z-index: 10;
+
+                @media print {
+                    visibility: visible;
+                    width: 100%;
+                    height: auto;
+                    overflow: visible;
+                }
+            }
+        }
+    }
+
+    .app-building {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        pointer-events: none;
+        z-index: 999999;
+
+        .app-building--progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: #38c;
+        }
+    }
+
+    .raw-html {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    @media print {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+}

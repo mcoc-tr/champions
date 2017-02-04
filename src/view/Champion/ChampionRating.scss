@@ -1,0 +1,33 @@
+@import "../../util/colors";
+
+.champion-rating {
+    float: right;
+
+    .champion-rating--value-5,
+    .champion-rating--value-4,
+    .champion-rating--value-3,
+    .champion-rating--value-2,
+    .champion-rating--value-1 {
+        text-shadow: 0 1px 0 #000;
+    }
+
+    .champion-rating--value-5 {
+        color: $color-rating-5;
+    }
+
+    .champion-rating--value-4 {
+        color: $color-rating-4;
+    }
+
+    .champion-rating--value-3 {
+        color: $color-rating-3;
+    }
+
+    .champion-rating--value-2 {
+        color: $color-rating-2;
+    }
+
+    .champion-rating--value-1 {
+        color: $color-rating-1;
+    }
+}

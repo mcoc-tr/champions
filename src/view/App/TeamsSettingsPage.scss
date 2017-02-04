@@ -1,0 +1,104 @@
+@import "../../util/colors";
+@import "../../util/button";
+@import "../../util/fonts";
+@import "../../util/input";
+
+.teams-settings {
+    padding: 0 24px 24px;
+
+    .teams-settings-section {
+        position: relative;
+        width: 500px;
+        max-width: 90%;
+        margin: 1em auto 1em;
+        padding: 0 0 8px;
+        background: #eee;
+        box-shadow: 0 8px 0 -4px  rgba(0, 0, 0, .25);
+
+        .header {
+            @extend .button--primary;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 16px;
+        }
+
+        .field-name {
+            @extend .font--text;
+            display: block;
+            padding: 16px 16px 0 16px;
+            font-size: 1em;
+            text-align: left;
+            line-height: 1.2em;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        .field-name--bold {
+            @extend .font--title;
+
+        }
+
+        .field-content {
+            position: relative;
+
+            .field-input {
+                @extend .button--primary;
+                background: #eee;
+                padding: 8px 16px;
+                position: relative;
+                box-sizing: border-box;
+
+                &.field-input-small {
+                    padding-right: 64px;
+                }
+
+                &.field-input-large {
+                    padding-right: 96px;
+                }
+
+                .field-checkbox {
+                    margin-left: 16px;
+                    font-size: 16px;
+                    color: #000;
+                    text-shadow: 0 1px 0 #fff;
+                }
+
+                .field-slider {
+                    //$track-width, $track-height, $track-background, $track-box-shadow, $track-border-radius,
+                    //$thumb-size, $thumb-background, $thumb-box-shadow, $thumb-border, $thumb-border-radius
+                    @include input-range(
+                        100%, 8px, #333, 0 1px 0 #fff, 1px,
+                        24px, -8px, #38c, 0 4px 0 -2px  rgba(0, 0, 0, .25), none, 0
+                    );
+
+                    width: 100%;
+                }
+            }
+
+            .field-description {
+                @extend .font--text;
+                box-sizing: border-box;
+                padding: 8px 64px 8px 32px;
+                font-size: 1em;
+                text-align: left;
+                line-height: 1.0em;
+                color: #555;
+                text-shadow: 0 1px 0 #fff;
+            }
+
+            .field-value {
+                @extend .font--title;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding: 8px 16px 8px 0;
+                color: #000;
+                font-size: 1em;
+                text-shadow: 0 1px 0 #fff;
+            }
+        }
+    }
+
+    .clear {
+        height: 32px;
+    }
+}

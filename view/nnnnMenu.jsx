@@ -131,7 +131,7 @@ const MenuOptions = {
                     title="share-to"
                 />
             );
-            const escapedUrl = encodeURIComponent('https://hook.github.io/champions');
+            const escapedUrl = encodeURIComponent('https://mcoc-tr.github.io/champions');
             options.push(
                 <MenuOptionGroup
                     options={[

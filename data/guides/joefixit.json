@@ -1,0 +1,50 @@
+{
+    "description": "Working as an enforcer for organized crime in Las Vegas, the dark incarnation of the Hulk named Joe Fixit is morally ambiguous at best, and downright cruel at worst. Dressed impeccably in his trademark suits, Mr. Fixit enjoys the finer things in life, like money, women, gambling, and gunning down his enemies with his dual Tommy Guns. He may be a weaker version of the Hulk, but he more than makes up for it with his firepower and sinister intelligence.",
+    "specials": {
+        "1": {
+            "name": "Place Your Bets",
+            "description": "55% chance to inflict Bleed, dealing 33% of your Attack as direct damage over 5 seconds.",
+            "note": "This attack has 6 potential Bleed triggers and allows up to 6 stacks of Bleed",
+            "damagetypes": [
+                "physical"
+            ],
+            "abilities": [
+                "bleed"
+            ]
+        },
+        "2": {
+            "name": "Shorten the Odds",
+            "description": "100% chance to Stun the opponent for 3 seconds.",
+            "abilities": [
+                "stun"
+            ]
+        },
+        "3": {
+            "description": "100% chance to inflict Bleed, dealing 245% of your Attack as direct damage over 3 seconds. ",
+            "abilities": [
+                "bleed"
+            ]
+        }
+    },
+    "signature": {
+        "name": "Double Down",
+        "description": "Mr. Fixit knows how to play the tables and swing the odds in his favor. Each time he rolls on Gambler’s Ruin, he has a (50 - 85%) chance to Double Down and gain a second poker suit for 7 seconds. The secondary effect only lasts 7 seconds. The secondary effect is just as strong as a standard effect from Gambler’s Ruin. Double Down has a chance to trigger each time you re-roll on Gambler’s Ruin. More rolls means more effect. ",
+        "note": "Each Double Down effect will be unique from the first effect, meaning you won’t ever get 2 stacks of Hearts, Spades, Diamonds or Clubs."
+    },
+    "gameplay": {
+        "description": "At the beginning of the fight and whenever he lands a Heavy attack, Joe gains a random poker suit and lets loose a different aspect of the gamma irradiated gangster he is. The effect lasts indefinitely and will only be replaced when Joe lands another Heavy Attack and rerolls This effect cannot be nullified as it is a passive ability.\n\n\nHEARTS: Joe triggers his accelerated healing ability, granting 15% health recovery per minute. \n\n\nDIAMONDS: He may not be as big as the Hulk, but you still won’t like him when he’s angry. Joe gains up to 40% Attack based on lost health. This effect works the same as Hulk’s Signature Rage effect and becomes more effective the more Health Joe has lost.  \n\n  SPADES: Mr. Fixit is morally ambiguous at best and knows how to make his punches hurt. Each attack has a 14% chance to Weaken or Fatigue the opponent, reducing attack by 10% and Critical Hit Rate by 5%. Each attack has a 14% chance to trigger Weakness and a 14% chance to trigger Fatigue. A single attack can trigger both and each of the effects stack up to two times each.\n\n\nCLUBS: Joe isn’t some dumb brute and he’s smart enough to take advantage of anyone who thinks he is, granting 10% Critical Hit rate for every 5 hits of his combo meter. The increased Critical Hit Rate actually increases by 2% for each hit of the combo meter, making each successful attack count.",
+        "abilities": [
+            "regeneration",
+            "fury",
+            "weakness",
+            "fatigue",
+            "precision"
+        ]
+    },
+    "author": {
+        "name": "Kabam",
+        "type": "spotlight",
+        "profile": "588478-Joe-Fixit-Champion-Spotlight"
+    },
+    "youtube": "lmUiwTSD-UM"
+}

@@ -1,0 +1,33 @@
+@import "../../util/colors";
+
+.menu-option--group {
+    overflow: hidden;
+
+    > .menu-option {
+        display: inline-table;
+        box-sizing: border-box;
+        text-align: center;
+
+        > .menu-option--label {
+            padding: .5em 0;
+        }
+    }
+
+    @for $i from 1 to 10 {
+        &.menu-option--group-#{ $i } {
+            > .menu-option {
+                width: #{ 100% / $i };
+            }
+        }
+    }
+
+    &.menu-option--group-tabs {
+        box-sizing: border-box;
+        padding-right: 48px;
+
+        > .menu-option {
+            width: 20%;
+            min-width: 36px;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@import "../../util/fonts";
+@import "../../util/colors";
+
+.synergy {
+    background: rgba(255, 255, 255, 0);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    canvas {
+        width: 100%;
+        height: 100%;
+
+        &.hover {
+            cursor: pointer;
+
+            & {
+                cursor: grab;
+            }
+        }
+
+        &.dragging {
+            cursor: move;
+
+            & {
+                cursor: grabbing;
+            }
+        }
+
+        &.selecting {
+            cursor: crosshair;
+
+            & {
+                cursor: cell;
+            }
+        }
+    }
+
+    .legend {
+        @extend .font--title;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 100%;
+        overflow-y: auto;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, .5);
+        color: #fff;
+        text-shadow: 0 1px 0 #000;
+        padding: 5px;
+        font-size: 1em;
+        line-height: 1.5em;
+        opacity: 1;
+        transition: opacity .25s, left .25s, top .25s;
+
+        &.legend--hidden {
+            pointer-events: none;
+            top: -50px;
+            left: -50px;
+            opacity: .001;
+        }
+
+        .legend-effect {
+            position: relative;
+            cursor: pointer;
+            border-left: solid 1.5em;
+            height: 1.5em;
+            line-height: 1.8em;
+            padding: 0 .4em 0 .2em;
+            opacity: .5;
+            transition: opacity .25s;
+
+            &.legend-effect--selected {
+                opacity: 1;
+                margin-left: 0;
+            }
+
+            .legend-effect-title {
+                position: relative;
+            }
+
+            &.legend-effect--none {
+                opacity: 1;
+                border-left-width: 0;
+                margin-left: 0;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+@import "../../util/colors";
+@import "../../util/fonts";
+
+.menu-option {
+    @extend .font--title;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    min-width: 2.2em;
+    color: #fff;
+    font-size: 1.1em;
+    text-shadow: 0 1px 0 #000;
+    text-decoration: none;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .menu-option {
+        font-size: 1.0em;
+        line-height: 1.0em;
+        height: 2em;
+
+        .menu-option--label {
+            height: 2em;
+        }
+    }
+
+    > .menu-option--label {
+        position: relative;
+        width: 100%;
+        pointer-events: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: .5em .5em .5em 1.5em;
+        box-sizing: border-box;
+    }
+
+    &.menu-option--options {
+        > .menu-option--label {
+            float: left;
+            width: 50%;
+            height: 2em;
+        }
+    }
+
+    &.menu-option--progress,
+    &:focus,
+    &:hover {
+        > .menu-option--label {
+            background: rgba(255, 255, 255, .65);
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+        }
+    }
+
+    &.menu-option--red {
+        > .menu-option--label {
+            background: #c33;
+        }
+
+        &:focus,
+        &:hover {
+            > .menu-option--label {
+                background: rgba(255, 192, 192, .65);
+            }
+        }
+    }
+
+    &.menu-option--selected {
+        > .menu-option--label {
+            background: #eee;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+        }
+    }
+
+    > .menu-option-options {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    > .menu-option-progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        max-width: 100%;
+        background: #fff;
+    }
+
+    &.menu-option--invalid {
+        color: #ccc;
+
+        &.menu-option--selected,
+        &:focus,
+        &:hover {
+            color: #333;
+        }
+    }
+
+    &.menu-option--noclick {
+        pointer-events: none;
+    }
+
+    .no-hover {
+        display: inline;
+    }
+
+    &:hover,
+    &:focus,
+    &.menu-option--selected {
+
+        .hover {
+            display: inline;
+        }
+
+        .no-hover {
+            display: none;
+        }
+    }
+}
